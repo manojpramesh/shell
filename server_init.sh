@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# run from github
+# bash <(curl -s https://raw.githubusercontent.com/manojpramesh/shell/master/server_init.sh)
+
 # To get the latest package lists
 sudo apt-get update
 
