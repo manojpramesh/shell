@@ -1,13 +1,12 @@
 #!/bin/sh
 
+# To get the latest package lists
+sudo apt-get update
 
-apt-get update  # To get the latest package lists
-
-## Install NodeJS 8.x
-
+# Install NodeJS 8.x
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install nodejs
-sudo apt-get install build-essential
+sudo apt-get install -y build-essential
 
 # Install MongoDB 3.2
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
