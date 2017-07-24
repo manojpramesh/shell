@@ -6,6 +6,8 @@
 # Open container
 docker exec -it bootstrap geth attach ipc://root/.ethereum/devchain/geth.ipc
 
+#!/usr/bin/env geth
+
 # run mining listner
 function checkWork() {
     if (txpool.status.pending > 0) {
