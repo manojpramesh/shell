@@ -7,7 +7,7 @@
 docker exec -it bootstrap bash
 
 # Attach to geth JavaScript console
-geth attach ipc://root/.ethereum/devchain/geth.ipc
+echo "geth attach ipc://root/.ethereum/devchain/geth.ipc"
 
 # run mining listner
 function checkWork() {
@@ -23,4 +23,4 @@ function checkWork() {
 }
 eth.filter("latest", function(err, block) { checkWork(); });
 eth.filter("pending", function(err, block) { checkWork(); });
-checkWork();
+checkWork();`
