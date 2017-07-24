@@ -4,10 +4,7 @@
 # bash <(curl -s https://raw.githubusercontent.com/manojpramesh/shell/master/mining_listner.sh)
 
 # Open container
-docker exec -it bootstrap bash
-
-# Attach to geth JavaScript console
-echo "geth attach ipc://root/.ethereum/devchain/geth.ipc"
+docker exec -it bootstrap geth attach ipc://root/.ethereum/devchain/geth.ipc
 
 # run mining listner
 function checkWork() {
@@ -23,4 +20,4 @@ function checkWork() {
 }
 eth.filter("latest", function(err, block) { checkWork(); });
 eth.filter("pending", function(err, block) { checkWork(); });
-checkWork();`
+checkWork();
